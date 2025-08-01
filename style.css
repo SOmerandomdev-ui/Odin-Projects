@@ -1,0 +1,27 @@
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family:'Times New Roman', Times, serif;
+    margin-top: 10px;
+    font-size: 30px;
+    border: 2px red solid;
+}
+
+.container {
+    border: 2px red solid;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin: 0 100px 0 100px;
+    height: 500px;
+    align-items: center;
+}
+
+img {
+    border: 2px blue solid;
+    
+}
+
+
+
