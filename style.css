@@ -3,24 +3,75 @@
     align-items: center;
     justify-content: center;
     font-family:'Times New Roman', Times, serif;
-    margin-top: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     font-size: 30px;
-    border: 2px red solid;
+    border: 1px black solid;
+
 }
 
 .container {
-    border: 2px red solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px black solid;
+}
+
+.split {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    margin: 0 100px 0 100px;
-    height: 500px;
-    align-items: center;
+    height: 300px;
+    align-items: top;
+    padding-top:50px;
+    text-align: center;
+    background-color: rgb(206, 199, 199);
+    font-size: 24px;
+    padding-bottom: 50px;
 }
 
-img {
-    border: 2px blue solid;
+.score {
+    display: flex;
+    font-size: 50px;
+    justify-content: center;
+    background-color: rgb(206, 199, 199);
+    padding-top: 10px;
+
+
+}
+
+.Rock:hover {
+    transform: scale(1.5);
+}
+
+.Paper:hover {
+    transform: scale(1.5);
+}
+
+.Scissors:hover {
+    transform: scale(1.5);
+}
+
+.Status {
+    display: flex;
+    justify-content: center;
+    color:black
     
+}
+
+.choices {
+    display: flex;
+    flex-direction: column;
+}
+
+.scoreboard {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:30px;
+    background-color: rgb(206, 199, 199);
+    padding-top: 40px;
+    font-size: 20px;
 }
 
 
