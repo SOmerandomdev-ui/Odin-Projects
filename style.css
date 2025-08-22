@@ -1,0 +1,131 @@
+* {
+    padding: 0;
+    margin:0;
+    font-family: Helvetica;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    overflow-x:hidden;
+    grid-template-columns: 1.5fr 5fr;
+    grid-template-rows: repeat(8, 17.5vh);
+    grid-template-areas: "Dashboard Header" 
+                         "Dashboard Body"
+                         "Dashboard Body" 
+                         "Dashboard Body" 
+                         "Dashboard Body" 
+                         "Dashboard Body" 
+                         "Dashboard Body" 
+                         "Dashboard Body";
+}
+
+.Dashboard {
+    grid-area: Dashboard;
+    display:grid;
+    background-color: #1992D4;
+    color: white;
+    font-weight: 700;
+    font-size: 1.2rem;
+    font-family: 'Times New Roman', Times, serif;
+    grid-template-rows: repeat(12, 1.5rem);
+    align-items: flex-start;
+    padding-left: 1rem;
+    padding-top: 1rem;
+    gap:0.9rem;
+    
+   
+}
+
+.Dashboard div:not(.Main) {
+    display: flex;
+    align-items: center;
+    padding-left: 0.4rem;
+}
+
+.Main {
+    font-size:1.6rem;
+    display: flex;
+    align-items: center;
+}
+
+.Dashboard  .Main img {
+    width:2.5rem;
+    height:2.5rem;
+}
+
+.Dashboard img {
+    width:1.2rem;
+    height:1.2rem;
+    padding-right:0.75rem;
+    filter: brightness(0) invert(1);
+}
+
+.Header {
+    grid-area: Header;
+    background-color: #FFFFFF;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr) 1.5fr;
+    grid-template-rows: 2fr 3fr;
+    grid-template-areas: "Search Search Search Fit Noti"
+                         "Entry Entry Blank Extra Extra";
+}
+
+.Header img {
+    height: 1.2rem;
+    width: 1.2rem;
+    padding-right: 0.5rem;
+}
+
+.Search {
+    grid-area: Search;
+    display: flex;
+    padding-top:1rem;
+    padding-left: 2.5rem;
+}
+
+form {
+    width:100%;
+}
+
+input{
+    border-radius: 10px 10px 10px 10px;
+    background-color: #E2E8F0;
+    border-width: 0px;
+    width:90%;
+    height:85%
+}
+
+input::placeholder {
+    padding-left: 1rem;
+}
+
+.Notification {
+    grid-area: Noti;
+    padding-top:1rem;
+    display:flex;
+    align-items: center;
+    font-weight: 700;
+}
+
+img[src="Thumbs.jpeg"] {
+    width: 2rem;
+    height: 2rem;
+    padding-left: 1rem;
+}
+
+.Notification p {
+    padding-left: 2rem;
+}
+
+.Entry {
+    grid-area: Entry;
+    display:flex;
+}
+
+.Body {
+    grid-area: Body;
+    background-color: #E2E8F0;
+}
+
