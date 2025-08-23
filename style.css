@@ -1,6 +1,6 @@
 * {
     padding: 0;
-    margin:0;
+    margin: 0;
     font-family: Helvetica;
 }
 
@@ -8,22 +8,22 @@ body {
     height: 100vh;
     width: 100vw;
     display: grid;
-    overflow-x:hidden;
+    overflow-x: hidden;
     grid-template-columns: 1.5fr 5fr;
-    grid-template-rows: repeat(8, 20vh);
-    grid-template-areas: "Dashboard Header" 
-                         "Dashboard Body"
-                         "Dashboard Body" 
-                         "Dashboard Body" 
-                         "Dashboard Body" 
-                         "Dashboard Body" 
-                         "Dashboard Body" 
-                         "Dashboard Body";
+    grid-template-rows: repeat(6, 20vh);
+    grid-template-areas: "Dashboard Header"
+        "Dashboard Body"
+        "Dashboard Body"
+        "Dashboard Body"
+        "Dashboard Body"
+        "Dashboard Body"
+
+    ;
 }
 
 .Dashboard {
     grid-area: Dashboard;
-    display:grid;
+    display: grid;
     background-color: #1992D4;
     color: white;
     font-weight: 700;
@@ -33,9 +33,9 @@ body {
     align-items: flex-start;
     padding-left: 1rem;
     padding-top: 1rem;
-    gap:0.9rem;
-    
-   
+    gap: 0.9rem;
+
+
 }
 
 .Dashboard div:not(.Main) {
@@ -45,20 +45,20 @@ body {
 }
 
 .Main {
-    font-size:1.6rem;
+    font-size: 1.6rem;
     display: flex;
     align-items: center;
 }
 
-.Dashboard  .Main img {
-    width:2.5rem;
-    height:2.5rem;
+.Dashboard .Main img {
+    width: 2.5rem;
+    height: 2.5rem;
 }
 
 .Dashboard img {
-    width:1.2rem;
-    height:1.2rem;
-    padding-right:0.75rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    padding-right: 0.75rem;
     filter: brightness(0) invert(1);
 }
 
@@ -68,11 +68,11 @@ body {
     z-index: 10;
     background-color: #FFFFFF;
     display: grid;
-    box-shadow: 0 0.05rem 1rem 0 rgba(0,0,0,0.2);
+    box-shadow: 0 0.05rem 1rem 0 rgba(0, 0, 0, 0.2);
     grid-template-columns: repeat(4, 1fr) 1.5fr;
     grid-template-rows: 2fr 3fr;
     grid-template-areas: "Search Search Search Fit Noti"
-                         "Entry Entry Blank Extra Extra";
+        "Entry Entry Blank Extra Extra";
 }
 
 .Header img {
@@ -84,23 +84,23 @@ body {
 .Search {
     grid-area: Search;
     display: flex;
-    padding-top:1rem;
+    padding-top: 1rem;
     padding-left: 2.5rem;
     align-items: center;
-    gap: 0.5rem;  
+    gap: 0.5rem;
 }
 
 form {
-    width:100%;
+    width: 100%;
     height: 2rem;
 }
 
-input{
+input {
     border-radius: 10px 10px 10px 10px;
     background-color: #E2E8F0;
     border-width: 0px;
-    width:90%;
-    height:85%
+    width: 90%;
+    height: 85%
 }
 
 input::placeholder {
@@ -109,8 +109,8 @@ input::placeholder {
 
 .Notification {
     grid-area: Noti;
-    padding-top:1rem;
-    display:flex;
+    padding-top: 1rem;
+    display: flex;
     align-items: center;
     font-weight: 700;
     justify-content: flex-end;
@@ -129,45 +129,45 @@ img[src="Thumbs.jpeg"] {
 
 .Entry {
     grid-area: Entry;
-    display:flex;
+    display: flex;
 }
 
 .Entry img[src="Thumbs.jpeg"] {
-    padding-top:0.5rem;
-     width: 3em;
+    padding-top: 0.5rem;
+    width: 3em;
     height: 3rem;
-    padding-left:2rem;
+    padding-left: 2rem;
 }
 
 .Entry div p:first-child {
-    font-size:0.6rem;
+    font-size: 0.6rem;
     font-weight: 700;
-    padding-top:1rem;
-    
+    padding-top: 1rem;
+
 }
 
 .Entry div p:nth-child(2) {
-    font-weight: 700; 
-    padding-top:0.25rem;
+    font-weight: 700;
+    padding-top: 0.25rem;
 }
 
 .Extra {
     grid-area: Extra;
     display: flex;
-    gap:1.5rem;
-    color:white;
+    gap: 1.5rem;
+    color: white;
     align-items: center;
     justify-content: end;
-    padding-right:2.5rem;
-   
+    padding-right: 2.5rem;
+
 }
 
-.Extra > div {
-     background-color:#1992D4;
-     font-size: 0.7rem;
-     padding: 0.5rem 1.5rem 0.5rem 1.5rem;
-     font-weight:700;
-    border-radius: 100px ;
+.Extra>div {
+    background-color: #1992D4;
+    font-size: 0.7rem;
+    padding: 0.5rem 1.5rem 0.5rem 1.5rem;
+    font-weight: 700;
+    border-radius: 100px;
     justify-content: flex-end;
 }
 
@@ -175,11 +175,11 @@ img[src="Thumbs.jpeg"] {
     grid-area: Body;
     display: grid;
     background-color: #E2E8F0;
-    min-height:20vh;
+    min-height: 20vh;
     grid-template-columns: 3fr 1.5fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "Projects Announce"
-                         "Projects Trending";
+        "Projects Trending";
 }
 
 
@@ -189,24 +189,88 @@ img[src="Thumbs.jpeg"] {
     font-weight: 700;
     padding-top: 4vh;
     padding-left: 1.5vw;
+    justify-self: start;
+
 }
 
 .Projects {
-    display:grid;
+    display: grid;
     grid-area: Projects;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.2fr 1fr 1fr 1fr;
+    grid-template-rows: 0.1fr 25vh 25vh 25vh;
+    justify-items: center;
+    gap: 1.2rem;
+
+}
+
+.Projects:nth-child(odd) {
+    padding-left: 0.5rem;
 }
 
 
 .Projects div {
-    grid-auto-rows:20vh;
-    width: 50%;
-    height: 20vh;
-    gap:2rem;
+    width: 90%;
+    height: 25vh;
+    gap: 2rem;
     background-color: white;
-    
+    box-shadow: -6px 0 0 0 #F0B429;
+    border-radius: 8px;
+}
+
+.Announcements {
+    grid-area: Announce;
+    display: flex;
+    font-size: 1rem;
+    font-weight: 700;
+    padding-top: 4vh;
+    padding-left: 1.5vw;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.Announce {
+    width: 70%;
+    background-color: white;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+}
+
+.Announce p:first-child {
+    padding-top: 2rem;
+}
+
+.Announce p:nth-child(even) {
+    font-weight: 100;
+    font-size: 0.75rem;
+    border-top: 0;
+    /* remove top border if any */
+    /* the line */
+
+}
+
+.Announce p:nth-of-type(2),
+.Announce p:nth-of-type(4) {
+    border-bottom: 2px solid #ccc;
 }
 
 
 
+.Announce p:nth-child(odd) {
+    font-weight: 700;
+    font-size: 0.9rem;
+
+}
+
+.Announce p:nth-child(2n+1) {
+    padding-top: 1rem;
+}
+
+.Announce:last-child, .Announce p:nth-child(2n)  {
+    padding-bottom: 1rem;
+}
