@@ -176,6 +176,7 @@ img[src="Thumbs.jpeg"] {
     display: grid;
     background-color: #E2E8F0;
     min-height: 20vh;
+     height: 100%; 
     grid-template-columns: 3fr 1.5fr;
     grid-template-rows: 1fr 1fr;
     grid-template-areas: "Projects Announce"
@@ -183,7 +184,7 @@ img[src="Thumbs.jpeg"] {
 }
 
 
-.Projects p {
+.Projects > p, .Trending > p {
     grid-column: 1 / 3;
     font-size: 1rem;
     font-weight: 700;
@@ -197,7 +198,7 @@ img[src="Thumbs.jpeg"] {
     display: grid;
     grid-area: Projects;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 0.1fr 25vh 25vh 25vh;
+    grid-template-rows: 0.1fr repeat(3,minmax(150px, 1fr));
     justify-items: center;
     gap: 1.2rem;
 
@@ -209,12 +210,38 @@ img[src="Thumbs.jpeg"] {
 
 
 .Projects div {
+    position: relative;
     width: 90%;
     height: 25vh;
     gap: 2rem;
     background-color: white;
-    box-shadow: -6px 0 0 0 #F0B429;
+    box-shadow: -6px 0 0 0 #F0B429, 2px 2px 4px grey;;
     border-radius: 8px;
+   font-weight: 700;
+   padding-top:1.7rem;
+   font-size:0.9rem;
+   padding-left: 1.5rem;
+   padding-right:1rem;
+   box-sizing: border-box;
+   
+}
+
+.Projects [class*="Project"] p:nth-child(2) {
+    font-weight: 700;
+    color:rgba(109, 109, 109, 0.704);
+    padding-top: 0.25rem;
+}
+
+.Projects img{
+    position: absolute;
+    bottom:1rem;
+    right:1rem;
+    height: 5vh;
+    width: 5vh;
+}
+
+.Projects img:hover {
+    filter: invert(37%) sepia(82%) saturate(3571%) hue-rotate(183deg) brightness(97%) contrast(97%);
 }
 
 .Announcements {
@@ -228,8 +255,8 @@ img[src="Thumbs.jpeg"] {
     gap: 1.2rem;
 }
 
-.Announce {
-    width: 70%;
+.Announce{
+    width: 90%;
     background-color: white;
     border-radius: 8px;
     display: flex;
@@ -238,28 +265,21 @@ img[src="Thumbs.jpeg"] {
     align-content: center;
     padding-left: 2rem;
     padding-right: 2rem;
+    box-sizing: border-box;
+    box-shadow: 2px 2px 4px grey;
 
-}
-
-.Announce p:first-child {
-    padding-top: 2rem;
 }
 
 .Announce p:nth-child(even) {
     font-weight: 100;
     font-size: 0.75rem;
     border-top: 0;
-    /* remove top border if any */
-    /* the line */
-
 }
 
 .Announce p:nth-of-type(2),
 .Announce p:nth-of-type(4) {
     border-bottom: 2px solid #ccc;
 }
-
-
 
 .Announce p:nth-child(odd) {
     font-weight: 700;
@@ -273,4 +293,36 @@ img[src="Thumbs.jpeg"] {
 
 .Announce:last-child, .Announce p:nth-child(2n)  {
     padding-bottom: 1rem;
+}
+
+.Trending {
+    position: relative;
+    grid-area: Trending;
+    display: flex;
+    font-size: 1rem;
+    font-weight: 700;
+    padding-top: 4vh;
+    padding-left: 1.5vw;
+    flex-direction: column;
+    gap: 1.2rem;
+    
+}
+
+.People {
+    display: flex;
+    height: 70%;
+    justify-content: start;
+    width: 90%;
+    background-color: white;
+    border-radius: 8px;    
+    box-sizing: border-box;
+    padding-top: 1rem;
+    padding-left:1rem;
+    color:grey;
+    box-shadow: 2px 2px 4px grey;
+}
+
+.People p {
+    opacity: 0.5;
+    font-weight:700
 }
