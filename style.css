@@ -1,0 +1,54 @@
+body {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+
+    height: 100vh;
+    width: 100vw;
+}
+.Turn {
+    font-size: 40px;
+    padding-bottom: 10vh;
+}
+
+.Game {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.Player {
+    display: flex;
+    flex-direction: column;
+
+    margin-right: 10vw;
+    gap: 20px;
+    font-size: 30px;
+}
+
+.Player div {
+    border: 1px solid black;
+    padding: 10px;
+    background-color: grey;
+}
+
+.board {
+    display: grid;
+    grid-template-columns: repeat(3, 15vw);
+    grid-template-rows: repeat(3, 25vh);
+}
+
+body .board div {
+    background-color: red;
+    border: solid 1px black;
+}
+
+.cell {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 300%
+}
