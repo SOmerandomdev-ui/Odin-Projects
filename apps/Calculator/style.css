@@ -1,0 +1,87 @@
+.Title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: 900;
+}
+
+.Container {
+    display: flex;
+    height: 600px;
+    width: 1264px;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(128, 128, 128, 0.400);
+}
+
+.Body {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    height: 450px;
+    width: 330px;
+    margin-top: 30px;
+    background-color: rgb(95, 93, 93);
+    gap: 20px;
+    border-radius: 10px;
+}
+
+.Screen {
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    width: 300px;
+    background-color: black;
+    height: 50px;
+    margin-top:20px;
+    border-radius: 10px;
+    font-size: 20px;
+}
+
+.Number {
+    padding-right: 10px;
+}
+
+.Buttons {
+    display: flex;
+    flex-direction: column;
+    width: 240px;
+    height: 330px;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.row1 {
+    margin-top: 10px;
+}
+
+.row, .row1 {
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;     
+    width: 240px; 
+    height: 50px; 
+    padding-top: 10px;
+
+}
+
+.CC, .Enter, img, .tile, .zero, .one, .op {
+    border: 1px black solid;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 153, 0);
+    border-radius: 10px;
+   
+}
+
+.Enter, .zero {
+    width: 100px;
+    height: 50px;
+}
+
+    
+    
