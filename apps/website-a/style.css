@@ -1,0 +1,78 @@
+.title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family:'Times New Roman', Times, serif;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 30px;
+    border: 1px black solid;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px black solid;
+}
+
+.split {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    height: 300px;
+    align-items: top;
+    padding-top:50px;
+    text-align: center;
+    background-color: rgb(206, 199, 199);
+    font-size: 24px;
+    padding-bottom: 50px;
+}
+
+.score {
+    display: flex;
+    font-size: 50px;
+    justify-content: center;
+    background-color: rgb(206, 199, 199);
+    padding-top: 10px;
+
+
+}
+
+.Rock:hover {
+    transform: scale(1.5);
+}
+
+.Paper:hover {
+    transform: scale(1.5);
+}
+
+.Scissors:hover {
+    transform: scale(1.5);
+}
+
+.Status {
+    display: flex;
+    justify-content: center;
+    color:black
+    
+}
+
+.choices {
+    display: flex;
+    flex-direction: column;
+}
+
+.scoreboard {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap:30px;
+    background-color: rgb(206, 199, 199);
+    padding-top: 40px;
+    font-size: 20px;
+}
+
+
+
