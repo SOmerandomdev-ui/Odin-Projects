@@ -1,0 +1,164 @@
+body { 
+    height: 100vh;
+    overflow: hidden;
+    
+}
+
+.Heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    width: 100vw;
+    font-size: 3.2rem;
+}
+
+.Selection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+
+    font-size: 2rem;
+    gap: 4rem;
+
+    margin-top: max(8%, 30vh);
+
+    & > div {
+        border: 1px black solid;
+        padding: 1rem;
+        border-radius: 25px;
+        transition: background-color 0.5s ease;
+    }
+
+    & > div:hover {
+        background-color: gray;
+        transition: background-color 0.5s ease;
+    }
+}
+
+.Setup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.Attackview {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(15%, -50%);
+}
+
+.squarecontainer {
+    display: flex;
+
+    width: 45rem;
+    height: 4.5rem;
+}
+
+.square {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: radial-gradient(circle at center, #4bb3d6, #3AB4D4, #1A6B8A);
+    border: 0.5px rgb(172, 179, 186) solid;
+    font-size: 2rem;
+    font-weight: bold;
+
+    width: 10%;
+    height: 100%;   
+}
+
+.AttackSquare {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        background: radial-gradient(circle at center, #d64b4b, #d43a3a, #8a1a1a);
+
+        border: 0.5px rgb(172, 179, 186) solid;
+        font-size: 2rem;
+        font-weight: bold;
+
+        width: 10%;
+        height: 100%;   
+}
+
+.Message {
+    position: absolute;
+
+    bottom: 6%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    font-size: 4rem;
+}
+
+.ShipContainer {
+    position: absolute;
+    border: 2px rgba(0, 0, 0, 0.217) solid;
+    background-color: rgb(243, 233, 233);
+
+    top: 50%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+
+    width: 25rem;
+    height: 50rem;
+
+    & > .ShipContainerTitle {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 2rem;
+    }
+
+    & > .ShipContainList {
+        display: flex;
+
+        margin-left: 1rem;
+        margin-top: 1rem;
+    }
+
+    & > .ShipCoordinateStart {
+        margin-left: 1rem;
+        margin-top: 1rem;
+
+    }
+
+    & > .ShipCoordinateEnd {
+        margin-left: 1rem;
+        margin-top: 1rem;
+    }
+
+    & > .Submission {
+        display: flex;
+
+        margin-left: 1rem;
+        margin-top: 1rem;
+    }
+}
+
+.AttackButton {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+
+    border: 1px black solid;
+    padding: 1rem;
+    border-radius: 25px;
+    font-size: 1.8rem;
+    transition: background-color 0.5s ease;
+    
+     &:hover {
+        background-color: gray;
+        transition: background-color 0.5s ease;
+    }
+
+}
