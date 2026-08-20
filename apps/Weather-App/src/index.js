@@ -11,7 +11,8 @@ async function GetCity(City) {
   Title.after(Loading)
 
   try {
-    let Place = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${City}?key=GCGYCP3VHJ9FKXDSK2A9EFSBK`);
+    let Place = await fetch(`/api/weather?city=${encodeURIComponent(City)}`);
+    if (!Place.ok) throw new Error("Failed to fetch weather");
     let DirtyData = await Place.json();
 
     Loading.remove()
